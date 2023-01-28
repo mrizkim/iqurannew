@@ -201,12 +201,19 @@ body {
 .about-section .text-arab {
   font-family: "mequran";
   color: var(--primary);
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .about-section p {
   color: var(--secondary);
   font-size: 1.5rem;
   text-align: justify;
+}
+.about-section .copyright {
+  margin: 3rem 0;
+  text-align: center;
+}
+.about-section .copyright a {
+  color: var(--text-color);
 }
 
 /* laptop */
