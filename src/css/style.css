@@ -82,6 +82,7 @@ body {
 
 .navbar .navbar-extra .extra-item i {
   font-size: 2rem;
+  font-weight: 400;
   color: var(--primary);
   background-color: var(--text-color);
   padding: 0.8rem;
@@ -91,7 +92,8 @@ body {
 
 .navbar .navbar-extra .extra-item p {
   color: var(--text-color);
-  font-weight: 100;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .container {
@@ -209,11 +211,71 @@ body {
   text-align: justify;
 }
 .about-section .copyright {
-  margin: 3rem 0;
   text-align: center;
+  margin-top: 2rem;
 }
 .about-section .copyright a {
   color: var(--text-color);
+}
+
+.about-section .copyright a:hover {
+  color: var(--primary);
+}
+
+.about-section .social-media {
+  display: inline-block;
+}
+.about-section .social-media a {
+  font-size: 3rem;
+  padding: 0 2rem;
+  color: var(--text-color);
+}
+.about-section .social-media a:hover {
+  color: var(--primary);
+}
+
+/* NGAJI.HTML */
+#item-ngaji {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 1rem; */
+  justify-content: center;
+  direction: rtl;
+}
+
+.row .hijaiyah {
+  width: 11rem;
+  text-align: center;
+  padding: 3rem 0;
+  font-family: "mequran";
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.row .hijaiyah:hover {
+  background-color: var(--primary);
+}
+
+.row .hijaiyah .huruf {
+  font-size: 2.5rem;
+}
+.row .hijaiyah .huruf span {
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+
+/* UNDERCONTRUCTION */
+
+.under-conturcion {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30rem;
+  height: 30rem;
+  background: url(/src/img/work-in-progress.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* laptop */
@@ -233,5 +295,9 @@ body {
 @media (max-width: 450px) {
   html {
     font-size: 60%;
+  }
+  .row .hijaiyah {
+    width: 8rem;
+    padding: 2rem 0;
   }
 }

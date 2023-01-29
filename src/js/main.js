@@ -37,9 +37,7 @@ const surahPage = () => {
   const url_api = `https://quran-api-id.vercel.app/surahs/${no_s}`;
 
   $.getJSON(url_api, function (data) {
-    console.log(data);
     let surah = data.ayahs;
-    console.log(surah);
     $.each(surah, function (i, data) {
       const elemenList = `<div class="item">
     <div class="no-surat">
@@ -57,20 +55,22 @@ const surahPage = () => {
 
 // doa.html
 
-$.getJSON("http://doa-doa-api-ahmadramadhan.fly.dev/api", function (data) {
-  $.each(data, function (i, data) {
+$.getJSON("https://islamic-api-zhirrr.vercel.app/api/doaharian", function (data) {
+  let doa = data.data;
+  $.each(doa, function (i, data) {
     const elemenList = `<div class="item">
     <div class="no-surat">
-    <p class="number">${data.id}</p>
+    <p class="number">${i + 1}</p>
     </div>
     <div class="doa">
-    <h3>${data.doa}</h3>
-    <h2>${data.ayat}</h2>
+    <h3>${data.title}</h3>
+    <h2>${data.arabic}</h2>
     <p>${data.latin}</p>
-    <h4>" ${data.artinya} "</h4>
+    <h4>" ${data.translation} "</h4>
     </div>
     </div>`;
 
     $("#item-doa").append(elemenList);
+    i++;
   });
 });
