@@ -269,6 +269,7 @@ $("#dropdown-ngaji").on("change", function () {
 //   }
 // });
 
+// KISAH NABI
 $.getJSON("https://islamic-api-zhirrr.vercel.app/api/kisahnabi", function (data) {
   $.each(data, function (i, data) {
     const elemenList = `<div class="content hideContent">
@@ -299,6 +300,7 @@ $.getJSON("https://islamic-api-zhirrr.vercel.app/api/kisahnabi", function (data)
   });
 });
 
+// KALENDER
 const d = new Date();
 const month = ("0" + (d.getMonth() + 1)).slice(-2);
 const year = d.getFullYear();
@@ -311,16 +313,15 @@ const apiSholat = `https://raw.githubusercontent.com/lakuapik/jadwalsholatorg/ma
 $.getJSON(apiSholat, function (data) {
   $.each(data, function (i, data) {
     content += ` 
-
       <tr>
-        <td>${data.tanggal}</td>
-        <td>${data.imsyak}</td>
-        <td>${data.shubuh}</td>
-        <td>${data.dhuha}</td>
-        <td>${data.dzuhur}</td>
-        <td>${data.ashr}</td>
-        <td>${data.magrib}</td>
-        <td>${data.isya}</td>
+        <td style="width: 25rem" class="mountDate">${data.tanggal}</td>
+        <td class="dateTime">${data.imsyak}</td>
+        <td class="dateTime">${data.shubuh}</td>
+        <td class="dateTime">${data.dhuha}</td>
+        <td class="dateTime">${data.dzuhur}</td>
+        <td class="dateTime">${data.ashr}</td>
+        <td class="dateTime">${data.magrib}</td>
+        <td class="dateTime">${data.isya}</td>
       </tr>
 
         `;

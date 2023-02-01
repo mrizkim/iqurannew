@@ -359,9 +359,8 @@ body {
 /* KALENDER */
 
 .kalender-list {
-  margin-top: 10rem;
+  margin-top: 15rem;
   padding: 0 5%;
-  overflow-x: scroll;
 }
 tr,
 th,
@@ -369,9 +368,15 @@ td {
   text-align: center;
   font-size: 1.5rem;
   border: 1px solid var(--secondary);
-  padding: 0 3rem;
 }
 
+tr:nth-child(even) {
+  background-color: var(--primary);
+}
+
+.dateTime {
+  width: 10rem;
+}
 /* UNDERCONTRUCTION */
 
 .under-conturcion {
@@ -416,6 +421,9 @@ td {
   th,
   td {
     font-size: 1rem;
-    padding: 0 1.5rem;
+  }
+
+  .mountDate {
+    font-size: 0.7rem;
   }
 }
