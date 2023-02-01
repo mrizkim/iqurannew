@@ -63,7 +63,6 @@ body {
   padding-bottom: 0.5rem;
   transform: scaleX(0);
 }
-
 .navbar .navbar-nav .navbar-item a:hover::after {
   transform: scaleX(0.5);
   transition: 0.2s;
@@ -99,6 +98,14 @@ body {
 .container {
   margin-top: 14rem;
   padding: 0 7%;
+}
+
+.container .section .bismillah {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 3rem;
+  font-family: "mequran";
+  margin-bottom: 2rem;
 }
 
 .container .section .row {
@@ -144,7 +151,21 @@ body {
   font-family: "mequran";
 }
 
-/* CSS SURAT.HTML */
+/* CSS SURAH.HTML */
+#searching {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin: 2rem 0;
+  position: sticky;
+  top: 16.2rem;
+}
+
+#item-surah .item {
+  cursor: default;
+}
+
 .row .item .ayat {
   width: 100%;
   padding-left: 3rem;
@@ -159,6 +180,10 @@ body {
   text-align: justify;
 
   color: var(--secondary);
+}
+
+.row .item .no-surat .play {
+  cursor: pointer;
 }
 
 /* DOA.HTML */
@@ -235,6 +260,46 @@ body {
 }
 
 /* NGAJI.HTML */
+.select-ngaji {
+  padding: 10000px;
+}
+
+.content-hijaiyah,
+.list-nabi {
+  display: none;
+}
+
+.container .section .menu-list {
+  margin-top: 16rem;
+}
+
+.list-nabi .content {
+  padding: 1rem 0;
+  line-height: 1.2;
+}
+
+.hideContent {
+  overflow: hidden;
+  line-height: 1em;
+  height: 12em;
+}
+
+.showContent {
+  line-height: 1em;
+  height: auto;
+}
+
+.kisah {
+  text-align: justify;
+  font-size: 1.5rem;
+}
+
+#show-more p {
+  color: var(--primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 #item-ngaji {
   display: flex;
   flex-wrap: wrap;
@@ -262,6 +327,49 @@ body {
 .row .hijaiyah .huruf span {
   font-size: 1.5rem;
   color: var(--secondary);
+}
+
+/* JADWAL SHOLAT */
+#list-jadwal {
+  color: var(--text-color);
+  /* background-color: #863ed5; */
+  margin-top: 2rem;
+  text-align: center;
+}
+#list-jadwal h2 {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+#list-jadwal .item-sholat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--primary);
+}
+#list-jadwal .item-sholat i {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+#list-jadwal .item-sholat p {
+  font-size: 2rem;
+}
+
+/* KALENDER */
+
+.kalender-list {
+  margin-top: 10rem;
+  padding: 0 5%;
+  overflow-x: scroll;
+}
+tr,
+th,
+td {
+  text-align: center;
+  font-size: 1.5rem;
+  border: 1px solid var(--secondary);
+  padding: 0 3rem;
 }
 
 /* UNDERCONTRUCTION */
@@ -299,5 +407,15 @@ body {
   .row .hijaiyah {
     width: 8rem;
     padding: 2rem 0;
+  }
+
+  .kalender-list {
+    padding: 0;
+  }
+  tr,
+  th,
+  td {
+    font-size: 1rem;
+    padding: 0 1.5rem;
   }
 }

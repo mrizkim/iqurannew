@@ -16,7 +16,7 @@
           <a href="#">i<span>Quran</span></a>
         </div>
         <div class="navbar-item">
-          <a href="#">About Us</a>
+          <a href="about.html">About Us</a>
         </div>
       </div>
       <div class="navbar-extra">
@@ -33,16 +33,16 @@
           <p>Do'a</p>
         </div>
         <div class="extra-item">
-          <a href="#">
-            <i class="bx bx-bookmark"></i>
+          <a href="kalender.html">
+            <i class="bx bx-calendar"></i>
           </a>
-          <p>Bookmark</p>
+          <p>Kalender</p>
         </div>
         <div class="extra-item">
-          <a href="lastRead.html">
+          <a href="#">
             <i class="bx bx-time"></i>
           </a>
-          <p>Last Read</p>
+          <p>Jadwal Sholat</p>
         </div>
         <div class="extra-item">
           <a href="ngaji.html">
@@ -54,14 +54,17 @@
     </nav>
     <div class="container">
       <div class="section">
-        <div class="under-conturcion"></div>
+        <h1 style="color: var(--primary); text-align: center; padding-top: 2rem">Jadwal Sholat</h1>
+        <div class="section-jadwal">
+          <select name="jadwal" id="dropdown-jadwal" style="padding: 0.5rem 0; margin-top: 1rem">
+            <option value="" selected>Pilih Kota</option>
+          </select>
+          <div id="list-jadwal"></div>
+        </div>
       </div>
     </div>
   </body>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-  <script src="src/js/main.js"></script> -->
-  <!-- <script>
-    surahPage();
-  </script> -->
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script src="src/js/main.js"></script>
 </html>

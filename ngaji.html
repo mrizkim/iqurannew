@@ -33,16 +33,16 @@
           <p>Do'a</p>
         </div>
         <div class="extra-item">
-          <a href="bookmark.html">
-            <i class="bx bx-bookmark"></i>
+          <a href="kalender.html">
+            <i class="bx bx-calendar"></i>
           </a>
-          <p>Bookmark</p>
+          <p>Kalender</p>
         </div>
         <div class="extra-item">
-          <a href="lastRead.html">
+          <a href="jadwalSholat.html">
             <i class="bx bx-time"></i>
           </a>
-          <p>Last Read</p>
+          <p>Jadwal Sholat</p>
         </div>
         <div class="extra-item">
           <a href="#">
@@ -54,107 +54,123 @@
     </nav>
     <div class="container">
       <div class="section">
-        <h1 style="color: var(--primary); text-align: center; margin-bottom: 3rem; padding-top: 2rem">
-          Ngaji <br />
-          <span style="font-size: 0.8rem; font-weight: 100; color: white">klik pada huruf</span>
-        </h1>
-        <div class="row" id="item-ngaji">
-          <div onclick="alif()" class="hijaiyah">
-            <h1 class="huruf">ا<br /><span>Alif</span></h1>
+        <select name="jadwal" id="dropdown-ngaji" style="padding: 0.5rem; margin-top: 2rem">
+          <option value="" selected>Pilih</option>
+          <option value="hijaiyah">Huruf Hijaiyah</option>
+          <option value="nabi">Kisah Nabi</option>
+        </select>
+        <!-- <div class="menu-list">
+          <button id="hijaiyah">Huruf Hijaiyah</button>
+          <button id="kisah-nabi">Kisah Nabi</button>
+        </div> -->
+
+        <div class="content-hijaiyah" id="content-hijaiyah">
+          <h1 style="color: var(--primary); text-align: center; margin-bottom: 3rem; padding-top: 2rem">
+            Ngaji <br />
+            <span style="font-size: 0.8rem; font-weight: 100; color: white">klik pada huruf</span>
+          </h1>
+          <div class="row" id="item-ngaji">
+            <div onclick="alif()" class="hijaiyah">
+              <h1 class="huruf">ا<br /><span>Alif</span></h1>
+            </div>
+            <div onclick="ba()" class="hijaiyah">
+              <h1 class="huruf">ب<br /><span>Ba</span></h1>
+            </div>
+            <div onclick="ta()" class="hijaiyah">
+              <h1 class="huruf">ت<br /><span>Ta</span></h1>
+            </div>
+            <div onclick="tsa()" class="hijaiyah">
+              <h1 class="huruf">ث<br /><span>Tsa</span></h1>
+            </div>
+            <div onclick="jim()" class="hijaiyah">
+              <h1 class="huruf">ج<br /><span>Jim</span></h1>
+            </div>
+            <div onclick="ha()" class="hijaiyah">
+              <h1 class="huruf">ح<br /><span>Ha</span></h1>
+            </div>
+            <div onclick="kho()" class="hijaiyah">
+              <h1 class="huruf">خ<br /><span>Kho</span></h1>
+            </div>
+            <div onclick="dal()" class="hijaiyah">
+              <h1 class="huruf">د<br /><span>Dal</span></h1>
+            </div>
+            <div onclick="dza()" class="hijaiyah">
+              <h1 class="huruf">ذ<br /><span>Dza</span></h1>
+            </div>
+            <div onclick="ro()" class="hijaiyah">
+              <h1 class="huruf">ر<br /><span>Ro</span></h1>
+            </div>
+            <div onclick="zay()" class="hijaiyah">
+              <h1 class="huruf">ز<br /><span>Zay</span></h1>
+            </div>
+            <div onclick="sin()" class="hijaiyah">
+              <h1 class="huruf">س<br /><span>Sin</span></h1>
+            </div>
+            <div onclick="syin()" class="hijaiyah">
+              <h1 class="huruf">ش<br /><span>Syin</span></h1>
+            </div>
+            <div onclick="shod()" class="hijaiyah">
+              <h1 class="huruf">ص<br /><span>Shod</span></h1>
+            </div>
+            <div onclick="dhod()" class="hijaiyah">
+              <h1 class="huruf">ض<br /><span>Dhod</span></h1>
+            </div>
+            <div onclick="tho()" class="hijaiyah">
+              <h1 class="huruf">ط<br /><span>Tho</span></h1>
+            </div>
+            <div onclick="dhzo()" class="hijaiyah">
+              <h1 class="huruf">ظ<br /><span>Dhzo</span></h1>
+            </div>
+            <div onclick="ain()" class="hijaiyah">
+              <h1 class="huruf">ع<br /><span>`Ain</span></h1>
+            </div>
+            <div onclick="ghoin()" class="hijaiyah">
+              <h1 class="huruf">غ<br /><span>Ghoin</span></h1>
+            </div>
+            <div onclick="fa()" class="hijaiyah">
+              <h1 class="huruf">ف<br /><span>Fa</span></h1>
+            </div>
+            <div onclick="qof()" class="hijaiyah">
+              <h1 class="huruf">ق<br /><span>Qof</span></h1>
+            </div>
+            <div onclick="kaf()" class="hijaiyah">
+              <h1 class="huruf">ك<br /><span>Kaf</span></h1>
+            </div>
+            <div onclick="lam()" class="hijaiyah">
+              <h1 class="huruf">ل<br /><span>Lam</span></h1>
+            </div>
+            <div onclick="mim()" class="hijaiyah">
+              <h1 class="huruf">م<br /><span>Mim</span></h1>
+            </div>
+            <div onclick="nun()" class="hijaiyah">
+              <h1 class="huruf">ن<br /><span>Nun</span></h1>
+            </div>
+            <div onclick="waw()" class="hijaiyah">
+              <h1 class="huruf">و<br /><span>Waw</span></h1>
+            </div>
+            <div onclick="Ha()" class="hijaiyah">
+              <h1 class="huruf">هـ<br /><span>ha</span></h1>
+            </div>
+            <div onclick="lamalif()" class="hijaiyah">
+              <h1 class="huruf">لا<br /><span>LamAlif</span></h1>
+            </div>
+            <div onclick="hamzah()" class="hijaiyah">
+              <h1 class="huruf">ء<br /><span>Hamzah</span></h1>
+            </div>
+            <div onclick="ya()" class="hijaiyah">
+              <h1 class="huruf">ي<br /><span>Ya</span></h1>
+            </div>
           </div>
-          <div onclick="ba()" class="hijaiyah">
-            <h1 class="huruf">ب<br /><span>Ba</span></h1>
-          </div>
-          <div onclick="ta()" class="hijaiyah">
-            <h1 class="huruf">ت<br /><span>Ta</span></h1>
-          </div>
-          <div onclick="tsa()" class="hijaiyah">
-            <h1 class="huruf">ث<br /><span>Tsa</span></h1>
-          </div>
-          <div onclick="jim()" class="hijaiyah">
-            <h1 class="huruf">ج<br /><span>Jim</span></h1>
-          </div>
-          <div onclick="ha()" class="hijaiyah">
-            <h1 class="huruf">ح<br /><span>Ha</span></h1>
-          </div>
-          <div onclick="kho()" class="hijaiyah">
-            <h1 class="huruf">خ<br /><span>Kho</span></h1>
-          </div>
-          <div onclick="dal()" class="hijaiyah">
-            <h1 class="huruf">د<br /><span>Dal</span></h1>
-          </div>
-          <div onclick="dza()" class="hijaiyah">
-            <h1 class="huruf">ذ<br /><span>Dza</span></h1>
-          </div>
-          <div onclick="ro()" class="hijaiyah">
-            <h1 class="huruf">ر<br /><span>Ro</span></h1>
-          </div>
-          <div onclick="zay()" class="hijaiyah">
-            <h1 class="huruf">ز<br /><span>Zay</span></h1>
-          </div>
-          <div onclick="sin()" class="hijaiyah">
-            <h1 class="huruf">س<br /><span>Sin</span></h1>
-          </div>
-          <div onclick="syin()" class="hijaiyah">
-            <h1 class="huruf">ش<br /><span>Syin</span></h1>
-          </div>
-          <div onclick="shod()" class="hijaiyah">
-            <h1 class="huruf">ص<br /><span>Shod</span></h1>
-          </div>
-          <div onclick="dhod()" class="hijaiyah">
-            <h1 class="huruf">ض<br /><span>Dhod</span></h1>
-          </div>
-          <div onclick="tho()" class="hijaiyah">
-            <h1 class="huruf">ط<br /><span>Tho</span></h1>
-          </div>
-          <div onclick="dhzo()" class="hijaiyah">
-            <h1 class="huruf">ظ<br /><span>Dhzo</span></h1>
-          </div>
-          <div onclick="ain()" class="hijaiyah">
-            <h1 class="huruf">ع<br /><span>`Ain</span></h1>
-          </div>
-          <div onclick="ghoin()" class="hijaiyah">
-            <h1 class="huruf">غ<br /><span>Ghoin</span></h1>
-          </div>
-          <div onclick="fa()" class="hijaiyah">
-            <h1 class="huruf">ف<br /><span>Fa</span></h1>
-          </div>
-          <div onclick="qof()" class="hijaiyah">
-            <h1 class="huruf">ق<br /><span>Qof</span></h1>
-          </div>
-          <div onclick="kaf()" class="hijaiyah">
-            <h1 class="huruf">ك<br /><span>Kaf</span></h1>
-          </div>
-          <div onclick="lam()" class="hijaiyah">
-            <h1 class="huruf">ل<br /><span>Lam</span></h1>
-          </div>
-          <div onclick="mim()" class="hijaiyah">
-            <h1 class="huruf">م<br /><span>Mim</span></h1>
-          </div>
-          <div onclick="nun()" class="hijaiyah">
-            <h1 class="huruf">ن<br /><span>Nun</span></h1>
-          </div>
-          <div onclick="waw()" class="hijaiyah">
-            <h1 class="huruf">و<br /><span>Waw</span></h1>
-          </div>
-          <div onclick="Ha()" class="hijaiyah">
-            <h1 class="huruf">هـ<br /><span>ha</span></h1>
-          </div>
-          <div onclick="lamalif()" class="hijaiyah">
-            <h1 class="huruf">لا<br /><span>LamAlif</span></h1>
-          </div>
-          <div onclick="hamzah()" class="hijaiyah">
-            <h1 class="huruf">ء<br /><span>Hamzah</span></h1>
-          </div>
-          <div onclick="ya()" class="hijaiyah">
-            <h1 class="huruf">ي<br /><span>Ya</span></h1>
-          </div>
+        </div>
+        <div class="list-nabi" id="list-nabi" style="color: white">
+          <h1 style="color: var(--primary); text-align: center; margin-bottom: 3rem; padding-top: 2rem">Kisah Nabi</h1>
         </div>
       </div>
     </div>
   </body>
 
   <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-  <!-- <script src="src/js/main.js"></script> -->
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="src/js/main.js"></script>
   <script src="./src/js/audio.js"></script>
 </html>
