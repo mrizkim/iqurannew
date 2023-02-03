@@ -51,6 +51,18 @@ body {
   color: var(--text-color);
 }
 
+.navbar-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.navbar-item i {
+  font-size: 2rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
 .navbar .navbar-nav .navbar-item a {
   font-size: 1.5rem;
   color: var(--text-color);
@@ -156,10 +168,15 @@ body {
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
-  border: none;
+  border: 1px solid var(--primary);
   margin: 2rem 0;
   position: sticky;
   top: 16.2rem;
+}
+
+::placeholder {
+  color: var(--bg-color);
+  opacity: 1;
 }
 
 #item-surah .item {
@@ -260,9 +277,9 @@ body {
 }
 
 /* NGAJI.HTML */
-.select-ngaji {
+/* .select-ngaji {
   padding: 10000px;
-}
+} */
 
 .content-hijaiyah,
 .list-nabi {
@@ -359,12 +376,13 @@ body {
 /* KALENDER */
 
 .kalender-list {
-  margin-top: 15rem;
+  margin-top: 16rem;
   padding: 0 5%;
 }
 tr,
 th,
 td {
+  color: var(--text-color);
   text-align: center;
   font-size: 1.5rem;
   border: 1px solid var(--secondary);
@@ -373,7 +391,6 @@ td {
 tr:nth-child(even) {
   background-color: var(--primary);
 }
-
 .dateTime {
   width: 10rem;
 }
@@ -426,4 +443,37 @@ tr:nth-child(even) {
   .mountDate {
     font-size: 0.7rem;
   }
+}
+
+/* DARK MODE */
+.light-mode {
+  background: var(--text-color);
+  color: var(--primary);
+}
+
+.light-mode ::placeholder {
+  color: var(--text-color);
+}
+
+.light-mode nav,
+.light-mode #searching {
+  background: var(--secondary);
+}
+
+.light-mode .navbar .navbar-nav .navbar-item i,
+.light-mode .navbar .navbar-extra .extra-item p,
+.light-mode .container .section .bismillah,
+.light-mode .container .section .row,
+.light-mode #list-jadwal,
+.light-mode th,
+.light-mode td,
+.light-mode .content,
+.light-mode .about-section h2,
+.light-mode .about-section .copyright a,
+.light-mode .about-section .social-media a {
+  color: var(--bg-color);
+}
+.light-mode .about-section .copyright a:hover,
+.light-mode .about-section .social-media a:hover {
+  color: var(--primary);
 }

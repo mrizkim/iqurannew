@@ -18,6 +18,8 @@
         </div>
         <div class="navbar-item">
           <a href="about.html">About Us</a>
+          <i class="bx bxs-sun" id="lightMode" onclick="setDarkMode(true)"></i>
+          <i class="bx bxs-moon" id="darkMode" onclick="setDarkMode(false)" style="display: none"></i>
         </div>
       </div>
       <div class="navbar-extra">
@@ -55,7 +57,7 @@
     </nav>
     <div class="container">
       <div class="section">
-        <select name="jadwal" id="dropdown-ngaji" style="padding: 0.5rem; margin-top: 2rem">
+        <select name="jadwal" id="dropdown-ngaji" style="padding: 0.5rem; margin-top: 2.5rem">
           <option value="" selected>Pilih</option>
           <option value="hijaiyah">Huruf Hijaiyah</option>
           <option value="nabi">Kisah Nabi</option>
@@ -174,4 +176,5 @@
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="src/js/main.js"></script>
   <script src="./src/js/audio.js"></script>
+  <script src="src/js/darkMode.js"></script>
 </html>

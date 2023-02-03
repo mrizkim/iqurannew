@@ -1,16 +1,23 @@
-// const btn = document.getElementById("btn-toggle");
-// btn.addEventListener("click", function () {
-//   btn.classList.toggle("bxs-sun");
-//   btn.classList.toggle("bxs-moon");
-//   document.body.style.backgroundColor = "var(--white)";
+// darkMode.addEventListener("click", function () {
+//   document.body.classList.toggle("dark-mode");
+//   darkMode.classList.toggle("bxs-sun");
+//   darkMode.classList.toggle("bxs-moon");
+//   console.log(localStorage);
 // });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const checkbox = document.querySelector(".dark-mode-checkbox");
-
-  checkbox.checked = localStorage.getItem("darkMode") === "true";
-
-  checkbox.addEventListener("change", function (event) {
-    localStorage.setItem("darkMode", event.currentTarget.checked);
-  });
-});
+const darkMode = document.getElementById("darkMode");
+const lightMode = document.getElementById("lightMode");
+if (localStorage.getItem("theme") == "light") setDarkMode(true);
+function setDarkMode(isDark) {
+  if (isDark) {
+    document.body.setAttribute("class", "light-mode");
+    lightMode.style.display = "none";
+    darkMode.style.display = "block";
+    localStorage.setItem("theme", "light");
+  } else {
+    document.body.setAttribute("class", "");
+    darkMode.style.display = "none";
+    lightMode.style.display = "block";
+    localStorage.removeItem("theme");
+  }
+}

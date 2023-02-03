@@ -33,12 +33,10 @@ $("#searching").on("keyup", function () {
     showSurah();
     return;
   }
-  console.log(value);
   $.getJSON("https://quran-api-id.vercel.app/surahs", function (data) {
     $.each(data, function (i, data) {
       let replaceData = data.name.replace("-", " ");
       let replaceDataNonS = replaceData.replaceAll("'", "");
-      console.log(replaceDataNonS);
       if (replaceDataNonS.search(myExp) != -1) {
         content += ` <div class="item nama_s"  no-surah="${data.number}" nama-surah="${data.name}"><div class="no-surat">
         <p class="number" >${data.number}</p>
@@ -112,7 +110,6 @@ const surahPage = () => {
 // doa.html
 
 $.getJSON("https://islamic-api-zhirrr.vercel.app/api/doaharian", function (data) {
-  console.log(data);
   let doa = data.data;
   $.each(doa, function (i, data) {
     const elemenList = `<div class="item">
