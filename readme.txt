@@ -1,5 +1,7 @@
 API
 
+Api alquran https://quran-api-id.vercel.app/surahs
+
 https://api-zhirrr.vercel.app/
 
 kisah nabi https://islamic-api-zhirrr.vercel.app/api/kisahnabi
