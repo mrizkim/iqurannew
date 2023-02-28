@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "mequran";
-  src: url("/me_quran.ttf");
+  src: url("/font/Al Qalam Quran Majeed Web Regular.ttf");
   font-weight: bold;
 }
 
@@ -105,6 +105,10 @@ body {
   color: var(--text-color);
   font-size: 1.2rem;
   font-weight: 400;
+}
+.navbar .navbar-extra .extra-item i.active {
+  background-color: var(--primary);
+  color: var(--text-color);
 }
 
 .container {
@@ -215,7 +219,7 @@ body {
   font-size: 1.5rem;
 }
 .row .item .doa h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: "mequran";
 }
 .row .item .doa p {
@@ -439,13 +443,12 @@ tr:nth-child(even) {
   td {
     font-size: 1rem;
   }
-
-  .mountDate {
-    font-size: 0.7rem;
-  }
 }
 
 /* DARK MODE */
+#lightMode {
+  color: yellow;
+}
 .light-mode {
   background: var(--text-color);
   color: var(--primary);
