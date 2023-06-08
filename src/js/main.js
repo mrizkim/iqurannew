@@ -110,24 +110,80 @@ const surahPage = () => {
 };
 
 // doa.html
+// const doaPage = () => {
+//   $.getJSON("https://islamic-api-zhirrr.vercel.app/api/doaharian", function (data) {
+//     let doa = data.data;
+//     $.each(doa, function (i, data) {
+//       const elemenList = `<div class="item">
+//     <div class="no-surat">
+//     <p class="number">${i + 1}</p>
+//     </div>
+//     <div class="doa">
+//     <h3>${data.title}</h3>
+//     <h2>${data.arabic}</h2>
+//     <p>${data.latin}</p>
+//     <h4>" ${data.translation} "</h4>
+//     </div>
+//     </div>`;
+
+//       $("#item-doa").append(elemenList);
+//       i++;
+//     });
+//   });
+// };
 const doaPage = () => {
-  $.getJSON("https://islamic-api-zhirrr.vercel.app/api/doaharian", function (data) {
-    let doa = data.data;
-    $.each(doa, function (i, data) {
-      const elemenList = `<div class="item">
+  function showDoa() {
+    $.getJSON("https://equran.id/_next/data/kxkUjfH9JP-fYvtf4Vn41/doa.json", function (data) {
+      let doa = data.pageProps.doas;
+      $.each(doa, function (i, data) {
+        const elemenList = `<div class="item">
     <div class="no-surat">
     <p class="number">${i + 1}</p>
     </div>
     <div class="doa">
-    <h3>${data.title}</h3>
-    <h2>${data.arabic}</h2>
-    <p>${data.latin}</p>
-    <h4>" ${data.translation} "</h4>
+    <h3>${data.nama}</h3>
+    <h2>${data.ar}</h2>
+    <p>${data.tr}</p>
+    <h4>" ${data.idn} "</h4>
     </div>
     </div>`;
 
-      $("#item-doa").append(elemenList);
-      i++;
+        $("#item-doa").append(elemenList);
+        i++;
+      });
+    });
+  }
+  showDoa();
+  $("#searchingDoa").on("keyup", function () {
+    var value = $("#searchingDoa").val().toLowerCase();
+    let content = "";
+    var myExp = new RegExp(value, "i");
+
+    if (value == 0) {
+      showDoa();
+      return;
+    }
+    $.getJSON("https://equran.id/_next/data/kxkUjfH9JP-fYvtf4Vn41/doa.json", function (data) {
+      let doa = data.pageProps.doas;
+      $.each(doa, function (i, data) {
+        let replaceData = data.nama.replace("-", " ");
+        let replaceDataNonS = replaceData.replaceAll("'", "");
+        if (replaceDataNonS.search(myExp) != -1) {
+          content += `<div class="item">
+          <div class="no-surat">
+          <p class="number">${i + 1}</p>
+          </div>
+          <div class="doa">
+          <h3>${data.nama}</h3>
+          <h2>${data.ar}</h2>
+          <p>${data.tr}</p>
+          <h4>" ${data.idn} "</h4>
+          </div>
+          </div>`;
+        }
+      });
+
+      $("#item-doa").html(content);
     });
   });
 };
