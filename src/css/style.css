@@ -27,6 +27,19 @@ body {
   background-color: var(--bg-color);
 }
 
+.logo-darmawan {
+  width: 5vmax;
+  padding-right: 5px;
+}
+.navbar .navbar-nav .logo .darmawan {
+  color: #863ed5;
+  /* font-size: 10px; */
+}
+
+/* .logo-text a {
+  font-size: 1rem;
+} */
+
 .navbar {
   background-color: #121931;
   position: fixed;
@@ -42,10 +55,15 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.navbar .navbar-nav .logo {
+  display: flex;
+  align-items: center;
+}
 
 .navbar .navbar-nav .logo a {
   color: var(--primary);
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding: 0;
 }
 
 .navbar .navbar-nav .logo a span {
@@ -54,8 +72,8 @@ body {
 
 .navbar-item {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   gap: 2rem;
 }
 .navbar-item i {
@@ -420,11 +438,19 @@ tr:nth-child(even) {
   html {
     font-size: 80%;
   }
+  .logo-darmawan {
+    width: 8vmax;
+    padding-right: 5px;
+  }
 }
 /* Tablet */
 @media (max-width: 768px) {
   html {
     font-size: 70%;
+  }
+  .logo-darmawan {
+    width: 8vmax;
+    padding-right: 5px;
   }
 }
 
@@ -432,6 +458,10 @@ tr:nth-child(even) {
 @media (max-width: 450px) {
   html {
     font-size: 60%;
+  }
+  .logo-darmawan {
+    width: 8vmax;
+    padding-right: 5px;
   }
   .row .hijaiyah {
     width: 8rem;

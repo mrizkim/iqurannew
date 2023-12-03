@@ -133,10 +133,12 @@ const surahPage = () => {
 // };
 const doaPage = () => {
   function showDoa() {
-    $.getJSON("https://equran.id/_next/data/kxkUjfH9JP-fYvtf4Vn41/doa.json", function (data) {
-      let doa = data.pageProps.doas;
-      $.each(doa, function (i, data) {
-        const elemenList = `<div class="item">
+    $.getJSON(
+      "https://equran.id/_next/data/MDFlHo6RkTeeFFrBmcgVx/doa.json",
+      function (data) {
+        let doa = data.pageProps.doas;
+        $.each(doa, function (i, data) {
+          const elemenList = `<div class="item">
     <div class="no-surat">
     <p class="number">${i + 1}</p>
     </div>
@@ -148,10 +150,11 @@ const doaPage = () => {
     </div>
     </div>`;
 
-        $("#item-doa").append(elemenList);
-        i++;
-      });
-    });
+          $("#item-doa").append(elemenList);
+          i++;
+        });
+      }
+    );
   }
   showDoa();
   $("#searchingDoa").on("keyup", function () {
@@ -163,13 +166,16 @@ const doaPage = () => {
       showDoa();
       return;
     }
-    $.getJSON("https://equran.id/_next/data/kxkUjfH9JP-fYvtf4Vn41/doa.json", function (data) {
-      let doa = data.pageProps.doas;
-      $.each(doa, function (i, data) {
-        let replaceData = data.nama.replace("-", " ");
-        let replaceDataNonS = replaceData.replaceAll("'", "");
-        if (replaceDataNonS.search(myExp) != -1) {
-          content += `<div class="item">
+    $.getJSON(
+      "https://equran.id/_next/data/MDFlHo6RkTeeFFrBmcgVx/doa.json",
+
+      function (data) {
+        let doa = data.pageProps.doas;
+        $.each(doa, function (i, data) {
+          let replaceData = data.nama.replace("-", " ");
+          let replaceDataNonS = replaceData.replaceAll("'", "");
+          if (replaceDataNonS.search(myExp) != -1) {
+            content += `<div class="item">
           <div class="no-surat">
           <p class="number">${i + 1}</p>
           </div>
@@ -180,29 +186,37 @@ const doaPage = () => {
           <h4>" ${data.idn} "</h4>
           </div>
           </div>`;
-        }
-      });
+          }
+        });
 
-      $("#item-doa").html(content);
-    });
+        $("#item-doa").html(content);
+      }
+    );
   });
 };
 
 // jadwalSholat.html
 const jadwalPage = () => {
-  $.getJSON("https://raw.githubusercontent.com/lakuapik/jadwalsholatorg/master/kota.json", function (data) {
-    $.each(data, function (i, data) {
-      const elemenList = `
+  $.getJSON(
+    "https://raw.githubusercontent.com/lakuapik/jadwalsholatorg/master/kota.json",
+    function (data) {
+      $.each(data, function (i, data) {
+        const elemenList = `
     <option value="${data}">${data}</option>`;
-      $("#dropdown-jadwal").append(elemenList);
-    });
-  });
+        $("#dropdown-jadwal").append(elemenList);
+      });
+    }
+  );
 
   $("#dropdown-jadwal").on("change", function () {
     const d = new Date();
-    const month = (d.getMonth() + 1).toString().length === 1 ? `0${d.getMonth() + 1}` : d.getMonth() + 1;
+    const month =
+      (d.getMonth() + 1).toString().length === 1
+        ? `0${d.getMonth() + 1}`
+        : d.getMonth() + 1;
     const year = d.getFullYear();
-    const day = d.getDate().toString().length === 1 ? `0${d.getDate()}` : d.getDate();
+    const day =
+      d.getDate().toString().length === 1 ? `0${d.getDate()}` : d.getDate();
     const value = $("#dropdown-jadwal option:selected").val();
     const newValue = `${value}/${year}/${month}`;
     let content = "";
@@ -332,9 +346,11 @@ const ngajiPage = () => {
   // });
 
   // KISAH NABI
-  $.getJSON("https://islamic-api-zhirrr.vercel.app/api/kisahnabi", function (data) {
-    $.each(data, function (i, data) {
-      const elemenList = `<div class="content hideContent">
+  $.getJSON(
+    "https://islamic-api-zhirrr.vercel.app/api/kisahnabi",
+    function (data) {
+      $.each(data, function (i, data) {
+        const elemenList = `<div class="content hideContent">
   <h1>${data.name}</h1>
   <p class="kisah">${data.description}</p>
 </div>
@@ -343,24 +359,25 @@ const ngajiPage = () => {
         <p>Show more</p>
     </div>`;
 
-      $("#list-nabi").append(elemenList);
-    });
+        $("#list-nabi").append(elemenList);
+      });
 
-    $("#show-more p").on("click", function () {
-      var showMore = $(this);
-      var content = showMore.parent().prev("div.content");
-      var linkText = showMore.text().toUpperCase();
-      if (linkText === "SHOW MORE") {
-        linkText = "Show less";
-        content.switchClass("hideContent", "showContent", 100);
-      } else {
-        linkText = "Show more";
-        content.switchClass("showContent", "hideContent", 100);
-      }
+      $("#show-more p").on("click", function () {
+        var showMore = $(this);
+        var content = showMore.parent().prev("div.content");
+        var linkText = showMore.text().toUpperCase();
+        if (linkText === "SHOW MORE") {
+          linkText = "Show less";
+          content.switchClass("hideContent", "showContent", 100);
+        } else {
+          linkText = "Show more";
+          content.switchClass("showContent", "hideContent", 100);
+        }
 
-      showMore.text(linkText);
-    });
-  });
+        showMore.text(linkText);
+      });
+    }
+  );
 };
 
 // KALENDER
@@ -368,7 +385,8 @@ const kalenderPage = () => {
   const d = new Date();
   const month = ("0" + (d.getMonth() + 1)).slice(-2);
   const year = d.getFullYear();
-  const day = d.getDate().toString().length === 1 ? `0${d.getDate()}` : d.getDate();
+  const day =
+    d.getDate().toString().length === 1 ? `0${d.getDate()}` : d.getDate();
   // const day = ("0" + (d.getDate() + 1)).slice(-2);
   // const value = $("#dropdown-jadwal option:selected").val();
   const newValue = `bogor/${year}/${month}`;

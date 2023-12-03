@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
     <link rel="stylesheet" href="src/css/style.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/x-icon" href="/src/img/quran.png" />
     <title>iQuran</title>
   </head>
@@ -14,12 +20,23 @@
     <nav class="navbar">
       <div class="navbar-nav">
         <div class="logo">
-          <a href="index.html">i<span>Quran</span></a>
+          <img class="logo-darmawan" src="/src/img/logo-darmawan.png" alt="" />
+          <div class="logo-text">
+            <a href="#"
+              >i<span>Quran</span> <br />
+              <span class="darmawan">Darmawan</span></a
+            >
+          </div>
         </div>
         <div class="navbar-item">
           <a href="about.html">About Us</a>
           <i class="bx bxs-sun" id="lightMode" onclick="setDarkMode(true)"></i>
-          <i class="bx bxs-moon" id="darkMode" onclick="setDarkMode(false)" style="display: none"></i>
+          <i
+            class="bx bxs-moon"
+            id="darkMode"
+            onclick="setDarkMode(false)"
+            style="display: none"
+          ></i>
         </div>
       </div>
       <div class="navbar-extra">
@@ -57,14 +74,27 @@
     </nav>
     <div class="container">
       <div class="section">
-        <h1 style="color: var(--primary); text-align: center; margin-bottom: 1rem; padding-top: 2rem">Surat AL Quran</h1>
+        <h1
+          style="
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1rem;
+            padding-top: 2rem;
+          "
+        >
+          Surat AL Quran
+        </h1>
         <h3 class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيم</h3>
         <div class="row" id="item-surah"></div>
       </div>
     </div>
   </body>
 
-  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"
+  ></script>
   <script src="src/js/main.js"></script>
   <script src="src/js/darkMode.js"></script>
   <script>
